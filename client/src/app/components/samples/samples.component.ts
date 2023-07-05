@@ -13,34 +13,31 @@ import {
   styleUrls: ['./samples.component.css'],
 })
 export class SamplesComponent implements OnInit {
-  @ViewChild('samples') siblingSamplesLink: ElementRef;
-  @Output() siblingSamples = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.siblingSamples.emit(this.siblingSamplesLink);
   }
   samplesData = [
     {
-      image: '../../../assets/Images/PredictionImage_1.png',
+      image: '../../../assets/Images/image_pred.png',
       alt: 'sample-image-1',
-      content: 'Mean Absolute Percentage Error : 15.660%',
+      content: 'Mean Absolute Percentage Error : 10.660%',
       for: 'item-1',
       id: 'sample-1',
     },
     {
-      image: '../../../assets/Images/PredictionImage_2.png',
+      image: '../../../assets/Images/chatbot.png',
       alt: 'sample-image-2',
-      content: 'Mean Absolute Error : 0.135',
+      content: 'ChatBot',
       for: 'item-2',
       id: 'sample-2',
     },
     {
-      image: '../../../assets/Images/PredictionImage_3.png',
+      image: '../../../assets/Images/vis_pie.png',
       alt: 'sample-image-3',
-      content: 'Mean Squared Error : 7.344',
+      content: 'Visualize',
       for: 'item-3',
       id: 'sample-3',
     },

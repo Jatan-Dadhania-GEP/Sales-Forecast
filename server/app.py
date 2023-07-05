@@ -110,6 +110,8 @@ def postPrediction(email):
         y_forecasted = pred.predicted_mean
         y_truth = new_data[predictColumn]
 
+        # visual = pd.merge(y_truth, y_forecasted, left_index=True, right_index=True)
+
         mse = mean_squared_error(y_truth,y_forecasted)
         rmse = sqrt(mse)
         mae=metrics.mean_absolute_error(y_forecasted, y_truth)
@@ -142,6 +144,7 @@ def postPrediction(email):
                             
                     })
 
+        # comparison = visual.to_csv('../client/src/assets/file/comparison.csv',index=False)
 
         prediction =frame.to_csv('../client/src/assets/file/prediction.csv',index=False)
         dfd = pd.read_csv('../client/src/assets/file/prediction.csv')

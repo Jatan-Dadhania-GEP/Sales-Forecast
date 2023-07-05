@@ -35,16 +35,12 @@ export class PredictionResultComponent implements OnInit {
   numericalValue: any;
   public getCurrentPredictionSubscription: Subscription;
   public savePredictionSubscription: Subscription;
-  aboutLink: ElementRef;
   predictDatasetLink: ElementRef;
-  contactUsLink: ElementRef;
   savedPredictionsLink: ElementRef;
   navbarContainer: ElementRef;
   navBrand: ElementRef;
   loginLink: ElementRef;
   home: ElementRef;
-  featureLink: ElementRef;
-  samplesLink: ElementRef;
   moreInfoLink: ElementRef;
   predictionData: GetSavedPrediction;
 
@@ -78,36 +74,19 @@ export class PredictionResultComponent implements OnInit {
       'style',
       'color: none !important'
     );
-    this.aboutLink.nativeElement.setAttribute(
-      'style',
-      'display: none !important'
-    );
     this.predictDatasetLink.nativeElement.setAttribute(
       'style',
       'color: none !important'
     );
-
-    this.contactUsLink.nativeElement.setAttribute(
-      'style',
-      'display: none !important'
-    );
-    this.featureLink.nativeElement.setAttribute(
-      'style',
-      'display: none !important'
-    );
-    this.samplesLink.nativeElement.setAttribute(
-      'style',
-      'display: none !important'
-    );
     this.navbarContainer.nativeElement.classList.add('bg-dark');
     this.navBrand.nativeElement.setAttribute(
       'style',
-      'color: white !important'
+      'color: none !important'
     );
 
     this.home.nativeElement.setAttribute(
       'style',
-      'color: rgb(179, 179, 179) !important'
+      'color: none !important'
     );
   }
 

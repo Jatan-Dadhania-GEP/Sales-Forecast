@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -32,7 +31,6 @@ import { ToastrModule } from 'ngx-toastr';
     HeaderComponent,
     AboutComponent,
     PredictDatasetComponent,
-    ContactUsComponent,
     FooterComponent,
     SavedPredictionsComponent,
     PredictionResultComponent,

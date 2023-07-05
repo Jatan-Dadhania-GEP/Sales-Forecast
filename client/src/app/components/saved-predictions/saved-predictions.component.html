@@ -1,13 +1,9 @@
 <app-navbar
-  (siblingAbout)="aboutLink = $event"
   (siblingPredictDataset)="predictDatasetLink = $event"
-  (siblingContactUs)="contactUsLink = $event"
   (siblingNavBrand)="navBrand = $event"
   (siblingHome)="home = $event"
   (siblingNavbarContainer)="navbarContainer = $event"
   (siblingSavedPredictions)="savedPredictionsLink = $event"
-  (siblingFeature)="featureLink = $event"
-  (siblingSamples)="samplesLink = $event"
   (siblingMoreInfo)="moreInfoLink = $event"
 ></app-navbar>
 <div class="savedPredictionsDiv" *ngIf="!showLoader">
@@ -41,7 +37,7 @@
   <div *ngIf="!predictionsSaved">
     <div class="container savePredictionImageDiv">
       <img
-        src="../../../assets/Images/savePrediction.jpg"
+        src="../../../assets/Images/predsnotfound.png"
         class="savePredictionHere"
       />
       <h5 *ngIf="show" class="savePredictionHereContent">
@@ -103,7 +99,7 @@
                   Predicted values
                 </button>
               </div>
-              <div class="col-lg-4 metricsDiv">
+              <!-- <div class="col-lg-4 metricsDiv">
                 <h6>
                   <b>Mean Absolute Percentage Error:</b>{{ " " + data.mape }}
                 </h6>
@@ -113,7 +109,7 @@
                 <h6><b>Mean Absolute Error:</b>{{ " " + data.mae }}</h6>
 
                 <h6><b>Mean Squared Error:</b>{{ " " + data.mse }}</h6>
-              </div>
+              </div> -->
               <div class="col-lg-1 iconsDiv">
                 <div class="btn-group infoIcon dropup">
                   <a
@@ -169,7 +165,7 @@
           <app-visualization></app-visualization>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          <button type="button" class="btn btn-secondary viewButton" data-dismiss="modal">
             Close
           </button>
         </div>

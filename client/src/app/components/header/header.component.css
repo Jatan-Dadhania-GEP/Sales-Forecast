@@ -6,6 +6,10 @@
   padding-top: 5em;
   font-size: 15px;
 }
+.header-image {
+  width: 400px;
+  height: 400px;
+}
 .header-button {
   margin-top: 1.5em;
   align-items: center;

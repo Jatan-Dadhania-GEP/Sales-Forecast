@@ -13,12 +13,9 @@ import {
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent implements OnInit {
-  @ViewChild('about') siblingAboutLink: ElementRef;
-  @Output() siblingAbout = new EventEmitter();
   constructor() {}
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.siblingAbout.emit(this.siblingAboutLink);
   }
 }

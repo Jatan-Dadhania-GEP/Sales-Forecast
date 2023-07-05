@@ -27,15 +27,11 @@ export class SavedPredictionsComponent implements OnInit {
   showLoader: boolean = true;
   public getSavedPredictionsSubscription: Subscription;
   public deletePredictionSubscription: Subscription;
-  aboutLink: ElementRef;
   predictDatasetLink: ElementRef;
-  contactUsLink: ElementRef;
   navBrand: ElementRef;
   home: ElementRef;
   navbarContainer: ElementRef;
   savedPredictionsLink: ElementRef;
-  samplesLink: ElementRef;
-  featureLink: ElementRef;
   moreInfoLink: ElementRef;
   constructor(
     private flaskApiService: FlaskapiService,
@@ -59,43 +55,27 @@ export class SavedPredictionsComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.aboutLink.nativeElement.setAttribute(
-      'style',
-      'display: none !important'
-    );
     this.predictDatasetLink.nativeElement.setAttribute(
       'style',
       'color: none !important'
     );
     this.moreInfoLink.nativeElement.setAttribute(
       'style',
-      'color: nonr !important'
-    );
-    this.contactUsLink.nativeElement.setAttribute(
-      'style',
-      'display: none !important'
-    );
-    this.featureLink.nativeElement.setAttribute(
-      'style',
-      'display: none !important'
-    );
-    this.samplesLink.nativeElement.setAttribute(
-      'style',
-      'display: none !important'
+      'color: none !important'
     );
     this.navbarContainer.nativeElement.classList.add('bg-dark');
     this.navBrand.nativeElement.setAttribute(
       'style',
-      'color: white !important'
+      'color: none !important'
     );
 
     this.home.nativeElement.setAttribute(
       'style',
-      'color: rgb(179, 179, 179) !important'
+      'color: none !important'
     );
     this.savedPredictionsLink.nativeElement.setAttribute(
       'style',
-      'color: white !important'
+      'color: none !important'
     );
   }
 

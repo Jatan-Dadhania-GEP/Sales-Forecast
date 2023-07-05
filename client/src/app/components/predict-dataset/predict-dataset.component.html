@@ -1,13 +1,9 @@
 <app-navbar
   (siblingNavbarContainer)="navbarContainer = $event"
-  (siblingAbout)="aboutLink = $event"
   (siblingSavedPredictions)="savedPredictionsLink = $event"
   (siblingPredictDataset)="predictDatasetLink = $event"
-  (siblingContactUs)="contactUsLink = $event"
   (siblingNavBrand)="navBrand = $event"
   (siblingHome)="home = $event"
-  (siblingFeature)="featureLink = $event"
-  (siblingSamples)="samplesLink = $event"
   (siblingMoreInfo)="moreInfoLink = $event"
 ></app-navbar>
 <div #predictDataset id="predictDatasetDiv" data-aos="zoom-out">

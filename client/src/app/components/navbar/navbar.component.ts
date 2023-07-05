@@ -26,28 +26,20 @@ export class NavbarComponent implements OnInit {
   fullName: any;
   email: any;
   phoneNumber: any;
-  @ViewChild('aboutLink') siblingAboutNavLink: ElementRef;
   @ViewChild('predictDatasetLink') siblingPredictDatasetNavLink: ElementRef;
-  @ViewChild('samplesLink') siblingSamplesLink: ElementRef;
-  @ViewChild('contactUsLink') siblingContactUsLink: ElementRef;
   @ViewChild('savedPredictionsLink') siblingSavedPredictionsLink: ElementRef;
   @ViewChild('navbarcontainer') siblingNavbarContainerElement: ElementRef;
   @ViewChild('navbrand') siblingNavBrandLink: ElementRef;
   @ViewChild('loginlink') siblingLoginLink: ElementRef;
   @ViewChild('home') siblingHomeLink: ElementRef;
-  @ViewChild('features') siblingFeatureLink: ElementRef;
   @ViewChild('moreInfoLink') siblingMoreInfoLink: ElementRef;
 
-  @Output() siblingAbout = new EventEmitter();
   @Output() siblingPredictDataset = new EventEmitter();
-  @Output() siblingSamples = new EventEmitter();
-  @Output() siblingContactUs = new EventEmitter();
   @Output() siblingSavedPredictions = new EventEmitter();
   @Output() siblingNavbarContainer = new EventEmitter();
   @Output() siblingNavBrand = new EventEmitter();
   @Output() siblingLogin = new EventEmitter();
   @Output() siblingHome = new EventEmitter();
-  @Output() siblingFeature = new EventEmitter();
   @Output() siblingMoreInfo = new EventEmitter();
 
   constructor(
@@ -85,17 +77,12 @@ export class NavbarComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.siblingAbout.emit(this.siblingAboutNavLink);
-
     this.siblingPredictDataset.emit(this.siblingPredictDatasetNavLink);
-    this.siblingSamples.emit(this.siblingSamplesLink);
-    this.siblingContactUs.emit(this.siblingContactUsLink);
     this.siblingSavedPredictions.emit(this.siblingSavedPredictionsLink);
     this.siblingNavbarContainer.emit(this.siblingNavbarContainerElement);
     this.siblingNavBrand.emit(this.siblingNavBrandLink);
     this.siblingLogin.emit(this.siblingLoginLink);
     this.siblingHome.emit(this.siblingHomeLink);
-    this.siblingFeature.emit(this.siblingFeatureLink);
     this.siblingMoreInfo.emit(this.siblingMoreInfoLink);
   }
   ngOnDestroy() {

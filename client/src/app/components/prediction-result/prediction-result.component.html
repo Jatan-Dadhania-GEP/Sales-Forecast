@@ -1,13 +1,9 @@
 <app-navbar
   (siblingNavbarContainer)="navbarContainer = $event"
-  (siblingAbout)="aboutLink = $event"
   (siblingSavedPredictions)="savedPredictionsLink = $event"
   (siblingPredictDataset)="predictDatasetLink = $event"
-  (siblingContactUs)="contactUsLink = $event"
   (siblingNavBrand)="navBrand = $event"
   (siblingHome)="home = $event"
-  (siblingFeature)="featureLink = $event"
-  (siblingSamples)="samplesLink = $event"
   (siblingMoreInfo)="moreInfoLink = $event"
 ></app-navbar>
 <div class="predictionResultDiv">
@@ -22,7 +18,7 @@
         <app-visualization></app-visualization>
       </div>
       <div class="col-lg-4 metricsDiv">
-        <h4 class="metrics-heading">Prediction Metrics</h4>
+        <!-- <h4 class="metrics-heading">Prediction Metrics</h4>
         <div class="card">
           <div class="card-body">
             <h6><b>Mean Absolute Percentage Error : </b>{{ mape }}%</h6>
@@ -30,7 +26,7 @@
             <h6><b>Root Mean Square Error : </b>{{ rmse }}</h6>
             <h6><b>Mean Squared Error : </b>{{ mse }}</h6>
           </div>
-        </div>
+        </div> -->
         <h4 class="options-heading">More Options</h4>
         <div class="card optionsDiv">
           <div class="card-body">
